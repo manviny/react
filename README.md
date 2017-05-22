@@ -9,14 +9,14 @@ export default(initialState) => {
 }
 
 4. create reducers/cart.js reducers/index.js
-export default(state = [], payload) => {
-    switch (payload.type) {
-        case 'add':
-            return [...state, payload.item];
-        default:
-            return state;
-    }
-};
+export default(state = [], payload) => {  
+    switch (payload.type) {  
+        case 'add':  
+            return [...state, payload.item];  
+        default:  
+            return state;  
+    }  
+};  
 
 import cart from './cart';
 import { combineReducers } from 'redux';
