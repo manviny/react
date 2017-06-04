@@ -9,22 +9,25 @@
     ├── components                  # 
     │   ├── login           
     │   │   ├── index.js  
-    │   │   ├── styles.js      
-    │   ├── faq.md  
-    ├── reducers                    # 
-    │   ├── TOC.md              
-    │   ├── faq.md   
+    │   │   ├── styles.js  
+    │   ├── **_mini**           
+    │   │   ├── index.js  
+    │   │   ├── styles.js       
+    │   ├── ... 
+    ├── reducers                    
+    │   ├── index.js                # combineReducers              
+    │   ├── user.js   
+    │   ├── _mini.js    
     │   └── ...      
-    ├── docs                    # 
-    │   ├── TOC.md              
-    │   ├── faq.md   
-    │   └── ...          
+    ├── App.js                    # 
+    ├── AppNavigator.js 
+    ├── configureStore.js 
+    ├── promise.js
+    ├── setup.js    
     └── ...
 
     
-    
-### comnponents/_mini/index.js
-### comnponents/_mini/styles.js
+
 
 
 ## comnponents/_mini/index.js
