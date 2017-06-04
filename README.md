@@ -1,12 +1,14 @@
-   |-- .bowerrc  
-    |-- .jshintrc  
-    |-- .jshintrc2  
-    |-- Gruntfile.js  
-    |-- README.md  
-    |-- bower.json  
-    |-- karma.conf.js  
-    |-- package.json  
-    |-- app  
+
+    .
+    ├── ...
+    ├── docs                    # Documentation files (alternatively `doc`)
+    │   ├── TOC.md              # Table of contents
+    │   ├── faq.md              # Frequently asked questions
+    │   ├── misc.md             # Miscellaneous information
+    │   ├── usage.md            # Getting started guide
+    │   └── ...                 # etc.
+    └── ...
+
     
     
 ### comnponents/_mini/index.js
