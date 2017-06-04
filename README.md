@@ -1,4 +1,4 @@
-``js
+```js
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -55,7 +55,7 @@ const mapStateToProps = state => ({
 
 export default connect(mapStateToProps, bindAction)(_mini);
 
-``
+```
 
 
 
