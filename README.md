@@ -1,3 +1,8 @@
+### comnponents/_mini/index.js
+### comnponents/_mini/styles.js
+
+
+## comnponents/_mini/index.js
 ```js
 
 import React, { Component } from 'react';
