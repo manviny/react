@@ -1,3 +1,14 @@
+   |-- .bowerrc
+    |-- .jshintrc
+    |-- .jshintrc2
+    |-- Gruntfile.js
+    |-- README.md
+    |-- bower.json
+    |-- karma.conf.js
+    |-- package.json
+    |-- app
+    
+    
 ### comnponents/_mini/index.js
 ### comnponents/_mini/styles.js
 
