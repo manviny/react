@@ -1,12 +1,24 @@
 
     .
     ├── ...
-    ├── docs                    # Documentation files (alternatively `doc`)
-    │   ├── TOC.md              # Table of contents
-    │   ├── faq.md              # Frequently asked questions
-    │   ├── misc.md             # Miscellaneous information
-    │   ├── usage.md            # Getting started guide
-    │   └── ...                 # etc.
+    ├── actions                     # Documentation files (alternatively `doc`)
+    │   ├── user.js                 # Table of contents
+    │   ├── _mini.js                # Frequently asked questions
+    │   ├── types.js                # Frequently asked questions    
+    │   └── ...                     # etc.
+    ├── components                  # 
+    │   ├── login           
+    │   │   ├── index.js  
+    │   │   ├── styles.js      
+    │   ├── faq.md  
+    ├── reducers                    # 
+    │   ├── TOC.md              
+    │   ├── faq.md   
+    │   └── ...      
+    ├── docs                    # 
+    │   ├── TOC.md              
+    │   ├── faq.md   
+    │   └── ...          
     └── ...
 
     
