@@ -1,3 +1,64 @@
+``js
+
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { Actions } from 'react-native-router-flux';
+import { Container, Header, Title, Content, Text, Button, Icon, Left, Right, Body } from 'native-base';
+
+import { openDrawer } from '../../actions/drawer';
+import styles from './styles';
+
+class _mini extends Component {
+
+
+
+  render() {
+
+    return (
+
+
+        <Container>
+
+            <Header>
+                <Left>
+                </Left>
+
+                <Body>
+                    <Title>{this.props.prueba}</Title>
+                </Body>
+                <Right>
+
+                </Right>
+            </Header>
+
+            <Content>
+                <Text>hola </Text>
+            </Content>
+
+        </Container>
+ 
+    );
+  }
+}
+
+function bindAction(dispatch) {
+  return {
+    openDrawer: () => dispatch(openDrawer()),
+  };
+}
+
+const mapStateToProps = state => ({
+  name: state.user.name,
+  prueba: 'estado'
+});
+
+
+export default connect(mapStateToProps, bindAction)(_mini);
+
+``
+
+
+
 1. npm i redux --save && npm i react-redux --save
 2. cd src && mkdir actions components reducers
 3. create store.js in root dir
