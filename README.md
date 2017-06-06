@@ -1,3 +1,7 @@
+http://localhost:8081/debugger-ui
+
+react-native run-ios
+
 
     .
     ├── ...
