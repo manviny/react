@@ -171,6 +171,22 @@ export default function (state:State = initialState, action:Action): State {
   return state;
 }
 
+```
 
+## AppNavigator.js
+```js
+...
+import _mini from './components/_mini';
+...
+_renderScene(props) {
+...
+      case '_mini':
+        return <_mini />;
+...
+        <RouterWithRedux>
+          <Scene key="root">
+          ...
+          <Scene key="_mini" component={_mini} />
+          ...
 
 ```
