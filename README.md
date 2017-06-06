@@ -48,9 +48,13 @@ export function setMini(mini:string):Action {
 ```js
 export type Action =
   { type: 'PUSH_NEW_ROUTE', route: string }
+  
+    ...
+  
     | { type: 'SET_USER', name: string}
     | { type: 'SET_MINI', name: string}
 
+    ...
 
 export type Dispatch = (action:Action | Array<Action>) => any;
 export type GetState = () => Object;
