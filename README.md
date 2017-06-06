@@ -26,6 +26,7 @@
     ├── setup.js    
     └── ...
 
+# Actions
 ## actions/_mini.js
 ```js
 // 	añadir en types.js
@@ -62,7 +63,7 @@ export type PromiseAction = Promise<Action>;
 ```
 
 
-
+# Component
 ## components/_mini/index.js
 ```js
 
@@ -123,7 +124,7 @@ export default connect(mapStateToProps, bindAction)(_mini);
 
 
 ```
-
+# Reducers
 ## reducers/index.js
 ```js
 import { combineReducers } from 'redux';
@@ -172,7 +173,7 @@ export default function (state:State = initialState, action:Action): State {
 }
 
 ```
-
+#  App
 ## AppNavigator.js
 ```js
 ...
