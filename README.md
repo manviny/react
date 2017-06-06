@@ -26,8 +26,6 @@
     ├── setup.js    
     └── ...
 
-    
-
 ## actions/_mini.js
 ```js
 // 	añadir en types.js
@@ -44,7 +42,22 @@ export function setMini(mini:string):Action {
     payload: mini,
   };
 }
+```    
+
+## actions/types.js
+```js
+export type Action =
+  { type: 'PUSH_NEW_ROUTE', route: string }
+    | { type: 'SET_USER', name: string}
+    | { type: 'SET_MINI', name: string}
+
+
+export type Dispatch = (action:Action | Array<Action>) => any;
+export type GetState = () => Object;
+export type PromiseAction = Promise<Action>;
 ```
+
+
 
 ## components/_mini/index.js
 ```js
