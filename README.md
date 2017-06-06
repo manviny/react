@@ -124,3 +124,53 @@ export default connect(mapStateToProps, bindAction)(_mini);
 
 ```
 
+## reducers/index.js
+```js
+import { combineReducers } from 'redux';
+
+import user from './user';
+
+    ...
+
+import mini from './_mini';
+
+    ...
+
+export default combineReducers({
+  user,
+  mini,
+ 
+});
+
+
+```
+
+## reducers/_mini.js
+```js
+// 	Añadir en /reducers/index.js
+//	combineReducers =>las lineas necesarias
+
+import type { Action } from '../actions/types';
+import { SET_MINI } from '../actions/_mini';
+
+export type State = {
+    mini: string
+}
+
+const initialState = {
+  mini: 'texto al inicializar',
+};
+
+export default function (state:State = initialState, action:Action): State {
+  if (action.type === SET_MINI) {
+    return {
+      ...state,
+      mini: action.payload,
+    };
+  }
+  return state;
+}
+
+
+
+```
