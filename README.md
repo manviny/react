@@ -195,3 +195,17 @@ _renderScene(props) {
           ...
 
 ```
+## desdeCualquierContainer.js
+```js
+...
+  _mini(index) {
+    this.props.setIndex(index);
+    Actions._mini();
+  }
+
+  render() {
+  ...
+  <Button  onPress={() => this._mini()}>
+  ...
+
+```
