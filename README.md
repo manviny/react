@@ -199,7 +199,6 @@ _renderScene(props) {
 ```js
 ...
   _mini(index) {
-    this.props.setIndex(index);
     Actions._mini();
   }
 
