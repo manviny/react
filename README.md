@@ -28,7 +28,23 @@
 
     
 
+## actions/_mini.js
+```js
+// 	añadir en types.js
+// 		| { type: 'SET_MINI', name: string}
 
+
+import type { Action } from './types';
+
+export const SET_MINI = 'SET_MINI';
+
+export function setMini(mini:string):Action {
+  return {
+    type: SET_MINI,
+    payload: mini,
+  };
+}
+```
 
 ## components/_mini/index.js
 ```js
