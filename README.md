@@ -88,7 +88,7 @@ export default combineReducers({
 
 ```
 
-### B.2)reducers/_mini.js
+### B.2) reducers/_mini.js
 ```js
 // 	Añadir en /reducers/index.js
 //	combineReducers =>las lineas necesarias
