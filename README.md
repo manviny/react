@@ -30,8 +30,8 @@ react-native run-ios
     ├── setup.js    
     └── ...
 
-# Actions
-## actions/_mini.js
+## Actions
+### actions/_mini.js
 ```js
 // 	añadir en types.js
 // 		| { type: 'SET_MINI', name: string}
@@ -49,7 +49,7 @@ export function setMini(mini:string):Action {
 }
 ```    
 
-## actions/types.js
+### actions/types.js
 ```js
 export type Action =
   { type: 'PUSH_NEW_ROUTE', route: string }
@@ -67,8 +67,8 @@ export type PromiseAction = Promise<Action>;
 ```
 
 
-# Component
-## components/_mini/index.js
+## Component
+### components/_mini/index.js
 ```js
 
 
@@ -128,8 +128,8 @@ export default connect(mapStateToProps, bindAction)(_mini);
 
 
 ```
-# Reducers
-## reducers/index.js
+## Reducers
+### reducers/index.js
 ```js
 import { combineReducers } from 'redux';
 
@@ -150,7 +150,7 @@ export default combineReducers({
 
 ```
 
-## reducers/_mini.js
+### reducers/_mini.js
 ```js
 // 	Añadir en /reducers/index.js
 //	combineReducers =>las lineas necesarias
@@ -177,8 +177,8 @@ export default function (state:State = initialState, action:Action): State {
 }
 
 ```
-#  App Router
-## AppNavigator.js
+##  App Router
+### AppNavigator.js
 ```js
 ...
 import _mini from './components/_mini';
@@ -195,7 +195,7 @@ _renderScene(props) {
           ...
 
 ```
-## desdeCualquierContainer.js
+### desdeCualquierContainer.js
 ```js
 ...
   _mini(index) {
@@ -208,3 +208,5 @@ _renderScene(props) {
   ...
 
 ```
+#FIREBASE
+#MAP LIST
