@@ -213,5 +213,5 @@ _renderScene(props) {
 # FIREBASE  
 # PROMISE
 Install redux-promise
-(redux-promise)[https://www.npmjs.com/package/redux-promise]
+[redux-promise](https://www.npmjs.com/package/redux-promise)
 # MAP LIST
