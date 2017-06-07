@@ -31,8 +31,8 @@ react-native run-ios
     └── ...
 
 # CONTAINER
-## Actions
-### actions/_mini.js
+## A) Actions
+### A.1) actions/_mini.js
 ```js
 // 	añadir en types.js
 // 		| { type: 'SET_MINI', name: string}
@@ -50,7 +50,7 @@ export function setMini(mini:string):Action {
 }
 ```    
 
-### actions/types.js
+### A.2) actions/types.js
 ```js
 export type Action =
   { type: 'PUSH_NEW_ROUTE', route: string }
@@ -66,10 +66,58 @@ export type Dispatch = (action:Action | Array<Action>) => any;
 export type GetState = () => Object;
 export type PromiseAction = Promise<Action>;
 ```
+## B) Reducers
+### B.1) reducers/index.js
+```js
+import { combineReducers } from 'redux';
+
+import user from './user';
+
+    ...
+
+import mini from './_mini';
+
+    ...
+
+export default combineReducers({
+  user,
+  mini,
+ 
+});
 
 
-## Component
-### components/_mini/index.js
+```
+
+### B.2)reducers/_mini.js
+```js
+// 	Añadir en /reducers/index.js
+//	combineReducers =>las lineas necesarias
+
+import type { Action } from '../actions/types';
+import { SET_MINI } from '../actions/_mini';
+
+export type State = {
+    mini: string
+}
+
+const initialState = {
+  mini: 'texto al inicializar',
+};
+
+export default function (state:State = initialState, action:Action): State {
+  if (action.type === SET_MINI) {
+    return {
+      ...state,
+      mini: action.payload,
+    };
+  }
+  return state;
+}
+
+```
+
+## C) Component
+### C.1) components/_mini/index.js
 ```js
 
 
@@ -129,57 +177,9 @@ export default connect(mapStateToProps, bindAction)(_mini);
 
 
 ```
-## Reducers
-### reducers/index.js
-```js
-import { combineReducers } from 'redux';
 
-import user from './user';
-
-    ...
-
-import mini from './_mini';
-
-    ...
-
-export default combineReducers({
-  user,
-  mini,
- 
-});
-
-
-```
-
-### reducers/_mini.js
-```js
-// 	Añadir en /reducers/index.js
-//	combineReducers =>las lineas necesarias
-
-import type { Action } from '../actions/types';
-import { SET_MINI } from '../actions/_mini';
-
-export type State = {
-    mini: string
-}
-
-const initialState = {
-  mini: 'texto al inicializar',
-};
-
-export default function (state:State = initialState, action:Action): State {
-  if (action.type === SET_MINI) {
-    return {
-      ...state,
-      mini: action.payload,
-    };
-  }
-  return state;
-}
-
-```
-##  App Router
-### AppNavigator.js
+##  D) App Router
+### D.1) AppNavigator.js
 ```js
 ...
 import _mini from './components/_mini';
@@ -196,7 +196,7 @@ _renderScene(props) {
           ...
 
 ```
-### desdeCualquierContainer.js
+### D.2) desdeCualquierContainer.js
 ```js
 ...
   _mini(index) {
